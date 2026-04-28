@@ -1,3 +1,5 @@
+import certifications from '../assets/certifications.png';
+
 export const TrustBar = () => {
   return (
     <div className="w-full bg-white py-10 px-4 border-b border-zinc-200">
@@ -9,7 +11,7 @@ export const TrustBar = () => {
         {/* Certification Logos - User needs to save the image as public/certifications.png */}
         <div className="w-full flex justify-center opacity-90 transition-opacity duration-300 hover:opacity-100">
           <img
-            src="./src/assets/certifications.png"
+            src={certifications}
             alt="Professional Certifications including Centre of Excellence, Neuro Change Institute, and Napoleon Hill Foundation"
             className="h-16 sm:h-20 md:h-28 w-auto object-contain drop-shadow-sm mix-blend-multiply"
           />

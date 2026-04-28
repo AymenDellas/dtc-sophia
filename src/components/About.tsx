@@ -1,3 +1,4 @@
+import sophia from '../assets/sophia.png';
 import Cta from './lib/Cta';
 
 const About = () => {
@@ -12,7 +13,7 @@ const About = () => {
             <div className="absolute inset-0 bg-emerald-900 rounded-3xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
 
             <div className="relative aspect-[4/5] bg-white border border-zinc-200 rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-xl shadow-zinc-900/10 overflow-hidden z-10">
-              <img src="./sophia.png" alt="" className="w-full h-full object-cover" />
+              <img src={sophia} alt="" className="w-full h-full object-cover" />
             </div>
           </div>
 
