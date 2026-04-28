@@ -1,6 +1,5 @@
 
-import React from 'react';
-import Cta from './lib/Cta';
+
 
 const Offer = () => {
   return (
@@ -16,7 +15,7 @@ const Offer = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-12">
-          
+
           {/* Path 1: Intensive */}
           <article className="relative bg-white border border-zinc-200 rounded-3xl p-8 sm:p-10 flex flex-col shadow-xl shadow-zinc-900/5 transition-transform duration-300 hover:-translate-y-2">
             <span className="text-xs font-bold text-amber-600 tracking-wider uppercase mb-4 block">
@@ -28,7 +27,7 @@ const Offer = () => {
             <p className="text-zinc-600 italic border-b border-zinc-100 pb-6 mb-6">
               For women ready to reset the subconscious patterns behind their results.
             </p>
-            
+
             <ul className="space-y-4 flex-1 mb-8">
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0"></div>
@@ -62,10 +61,10 @@ const Offer = () => {
               </p>
             </div>
 
-            <a 
-              href="https://live.vcita.com/site/sophiabailey" 
-              target="_blank" 
-              rel="noreferrer" 
+            <a
+              href="https://live.vcita.com/site/sophiabailey"
+              target="_blank"
+              rel="noreferrer"
               className="w-full text-center px-6 py-4 rounded-xl border-2 border-emerald-900 text-emerald-900 font-bold hover:bg-emerald-900 hover:text-white transition-colors duration-200"
             >
               Learn More &amp; Apply
@@ -89,7 +88,7 @@ const Offer = () => {
               <p className="text-emerald-100/80 italic border-b border-emerald-800/50 pb-6 mb-6">
                 For experienced leaders and coaches ready for their next chapter — personally and professionally.
               </p>
-              
+
               <ul className="space-y-4 flex-1 mb-8">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2.5 shrink-0"></div>
@@ -123,8 +122,8 @@ const Offer = () => {
                 </li>
               </ul>
 
-              <a 
-                href="#apply" 
+              <a
+                href="#apply"
                 className="w-full text-center px-6 py-4 rounded-xl bg-amber-400 text-emerald-950 font-bold hover:bg-amber-300 transition-colors duration-200 mt-auto"
               >
                 Apply for the Collective

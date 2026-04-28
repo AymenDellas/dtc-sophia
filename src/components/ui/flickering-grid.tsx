@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface FlickeringGridProps {
   squareSize?: number;
@@ -36,7 +36,7 @@ export const FlickeringGrid = ({
       const match = color.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
       return match
         ? `${parseInt(match[1], 16)}, ${parseInt(match[2], 16)}, ${parseInt(match[3], 16)}`
-        : "107, 114, 128"; 
+        : "107, 114, 128";
     })();
 
     const init = () => {
@@ -61,7 +61,7 @@ export const FlickeringGrid = ({
       for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
           const idx = i * rows + j;
-          const currentOpacity = squares[idx];
+
 
           if (Math.random() < flickerChance) {
             squares[idx] = Math.random() * maxOpacity;

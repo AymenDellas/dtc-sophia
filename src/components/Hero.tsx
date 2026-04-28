@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Cta from './lib/Cta';
 
 const Hero = () => {
