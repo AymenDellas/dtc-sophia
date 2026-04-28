@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sophia Bailey-Larsen — Transformational Mentoring for Visionary Women Leaders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --emerald: #0D2B22;
+      --emerald-mid: #1a4035;
+      --gold: #C9A84C;
+      --gold-light: #e8c97a;
+      --parchment: #FAF8F4;
+      --parchment-dark: #f0ebe2;
+      --near-black: #111111;
+      --charcoal: #1A1A1A;
+      --warm-white: #F5F0E8;
+      --muted: #7a7268;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); font-size: 17px; line-height: 1.75; color: var(--charcoal); background: var(--parchment); -webkit-font-smoothing: antialiased; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp 0.8s ease forwards; }
+    .d1 { animation-delay: 0.1s; opacity: 0; }
+    .d2 { animation-delay: 0.25s; opacity: 0; }
+    .d3 { animation-delay: 0.4s; opacity: 0; }
+    .d4 { animation-delay: 0.55s; opacity: 0; }
+
+    /* NAV */
+    .main-nav { position: sticky; top: 0; z-index: 100; background: rgba(250,248,244,0.96); border-bottom: 1px solid rgba(13,43,34,0.1); display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; backdrop-filter: blur(10px); }
+    .nav-logo { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; color: var(--emerald); text-decoration: none; letter-spacing: 0.02em; }
+    .nav-logo small { display: block; font-family: var(--sans); font-size: 0.58rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: -3px; }
+
+    /* BUTTONS */
+    .btn-primary { display: inline-block; background: var(--gold); color: var(--emerald); font-family: var(--sans); font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em; padding: 14px 30px; border-radius: 3px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-primary.lg { padding: 17px 40px; font-size: 1rem; }
+    .btn-secondary { display: inline-block; background: transparent; color: var(--emerald); font-family: var(--sans); font-weight: 500; font-size: 0.88rem; letter-spacing: 0.04em; padding: 13px 28px; border-radius: 3px; border: 1.5px solid var(--emerald); text-decoration: none; transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--emerald); color: var(--warm-white); }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--emerald); padding: 11px 48px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .trust-bar span { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold); }
+    .trust-bar i { width: 3px; height: 3px; border-radius: 50%; background: rgba(201,168,76,0.4); display: inline-block; flex-shrink: 0; }
+
+    /* HERO */
+    .hero { background: var(--parchment); padding: 108px 48px 96px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 45% at 50% -5%, rgba(201,168,76,0.09) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+    .eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 26px; }
+    h1 { font-family: var(--serif); font-size: clamp(2.3rem, 5vw, 3.7rem); font-weight: 600; line-height: 1.16; color: var(--emerald); margin-bottom: 26px; letter-spacing: -0.01em; }
+    .sub { font-size: 1.05rem; line-height: 1.82; color: var(--muted); max-width: 610px; margin: 0 auto 40px; font-weight: 300; }
+    .micro { font-size: 0.76rem; color: var(--muted); font-style: italic; margin-top: 12px; display: block; }
+
+    /* PROOF STRIP */
+    .proof-strip { background: var(--emerald); padding: 52px 48px; }
+    .proof-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; list-style: none; }
+    .proof-pill { border-left: 3px solid var(--gold); padding: 20px 22px; background: rgba(255,255,255,0.04); border-radius: 0 3px 3px 0; }
+    .proof-pill blockquote { font-family: var(--serif); font-style: italic; font-size: 1.02rem; line-height: 1.62; color: var(--warm-white); margin-bottom: 10px; }
+    .proof-pill cite { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+    /* SHARED */
+    .wrap { max-width: 820px; margin: 0 auto; }
+    .wrap-wide { max-width: 1100px; margin: 0 auto; }
+    h2 { font-family: var(--serif); font-size: clamp(1.85rem, 3.2vw, 2.7rem); font-weight: 600; line-height: 1.2; color: var(--emerald); margin-bottom: 22px; letter-spacing: -0.01em; }
+    .label { font-size: 0.67rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 14px; }
+    p+p { margin-top: 15px; }
+    section { padding: 92px 48px; }
+
+    /* PROBLEM */
+    .problem { background: var(--near-black); }
+    .problem h2 { color: var(--warm-white); max-width: 680px; }
+    .problem .sub-p { color: rgba(245,240,232,0.6); max-width: 660px; margin-bottom: 30px; }
+    .problem-list { list-style: none; }
+    .problem-list li { color: rgba(245,240,232,0.82); font-size: 1rem; line-height: 1.72; padding: 17px 0 17px 26px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .problem-list li::before { content: ''; position: absolute; left: 0; top: 27px; width: 8px; height: 1px; background: var(--gold); }
+    .problem .closer { color: rgba(201,168,76,0.6); font-style: italic; font-family: var(--serif); font-size: 1.05rem; margin-top: 30px; }
+
+    /* SOLUTION */
+    .solution { background: var(--parchment); }
+    .solution p { color: #3a3530; font-size: 1.03rem; }
+
+    /* OFFER */
+    .offer { background: var(--parchment-dark); }
+    .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 44px; }
+    .offer-card { background: var(--parchment); border: 1px solid rgba(13,43,34,0.12); border-radius: 4px; padding: 38px 34px; display: flex; flex-direction: column; }
+    .offer-card.featured { border-color: var(--gold); }
+    .offer-eyebrow { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: block; }
+    .offer-card h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: var(--emerald); margin-bottom: 8px; line-height: 1.25; }
+    .offer-tagline { font-size: 0.93rem; color: var(--muted); font-style: italic; margin-bottom: 24px; padding-bottom: 22px; border-bottom: 1px solid rgba(13,43,34,0.09); }
+    .offer-features { list-style: none; flex: 1; margin-bottom: 28px; }
+    .offer-features li { padding: 11px 0 11px 20px; position: relative; font-size: 0.94rem; line-height: 1.6; border-bottom: 1px solid rgba(13,43,34,0.05); color: #3a3530; }
+    .offer-features li::before { content: ''; position: absolute; left: 0; top: 20px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+    .offer-features li strong { color: var(--emerald); font-weight: 500; }
+    .placeholder-note { font-size: 0.78rem; color: var(--gold); font-style: italic; background: rgba(201,168,76,0.08); border: 1px dashed rgba(201,168,76,0.35); padding: 9px 13px; border-radius: 3px; margin-bottom: 18px; }
+
+    /* QUALIFICATION */
+    .qual { background: var(--emerald); }
+    .qual h2 { color: var(--warm-white); margin-bottom: 24px; }
+    .qual h2.nf { margin-top: 52px; color: rgba(245,240,232,0.5); font-style: italic; }
+    .qual-list { list-style: none; }
+    .qual-list li { color: rgba(245,240,232,0.82); font-size: 1rem; line-height: 1.72; padding: 16px 0 16px 26px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .qual-list li::before { content: ''; position: absolute; left: 0; top: 26px; width: 8px; height: 1px; background: var(--gold); }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--parchment); }
+    .t-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 44px; }
+    .t-card { background: white; border-radius: 4px; padding: 32px 28px; box-shadow: 0 2px 18px rgba(13,43,34,0.06); display: flex; flex-direction: column; }
+    .t-photo { width: 60px; height: 60px; border-radius: 50%; background: var(--parchment-dark); border: 2px solid var(--gold); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+    .t-card h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--emerald); margin-bottom: 2px; }
+    .t-loc { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .t-card blockquote { font-family: var(--serif); font-style: italic; font-size: 0.98rem; line-height: 1.7; color: #4a4540; flex: 1; }
+    .t-note { font-size: 0.75rem; color: var(--gold); font-style: italic; background: rgba(201,168,76,0.07); border: 1px dashed rgba(201,168,76,0.3); padding: 7px 11px; border-radius: 3px; margin-top: 14px; }
+
+    /* ABOUT */
+    .about { background: var(--parchment-dark); }
+    .about-grid { display: grid; grid-template-columns: 340px 1fr; gap: 60px; align-items: start; }
+    .about-photo { aspect-ratio: 4/5; background: var(--parchment); border-radius: 3px; border: 1px solid rgba(13,43,34,0.1); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
+    .about-photo p { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .about-photo small { font-size: 0.63rem; color: var(--muted); font-style: italic; }
+    .about p { color: #3a3530; font-size: 1rem; margin-bottom: 14px; }
+    .creds { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 9px; }
+    .creds li { display: flex; align-items: flex-start; gap: 11px; font-size: 0.9rem; color: var(--emerald); font-weight: 500; }
+    .creds li::before { content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-top: 8px; }
+
+    /* RISK REVERSAL */
+    .risk { background: var(--parchment); text-align: center; border-top: 1px solid rgba(13,43,34,0.07); border-bottom: 1px solid rgba(13,43,34,0.07); }
+    .risk h2 { font-style: italic; font-weight: 400; font-size: clamp(1.55rem, 2.8vw, 2.15rem); max-width: 620px; margin: 0 auto 18px; }
+    .risk p { color: var(--muted); max-width: 540px; margin: 0 auto 12px; font-size: 1rem; }
+    .risk .action-note { font-size: 0.75rem; font-style: italic; color: var(--gold); margin-top: 10px; }
+
+    /* URGENCY BAR */
+    .urgency-bar { background: var(--gold); padding: 15px 48px; text-align: center; }
+    .urgency-bar p { font-size: 0.86rem; font-weight: 500; letter-spacing: 0.02em; color: var(--emerald); }
+
+    /* FINAL CTA */
+    .final-cta { background: var(--emerald); text-align: center; }
+    .final-cta h2 { color: var(--warm-white); max-width: 660px; margin: 0 auto 18px; }
+    .final-cta p { color: rgba(245,240,232,0.6); max-width: 500px; margin: 0 auto 36px; font-size: 1rem; }
+    .final-cta .micro { color: rgba(201,168,76,0.6); margin-top: 16px; }
+
+    /* FAQ */
+    .faq { background: var(--parchment-dark); }
+    .faq-list { margin-top: 44px; }
+    .faq-item { border-bottom: 1px solid rgba(13,43,34,0.09); }
+    .faq-q { font-family: var(--sans); font-size: 0.98rem; font-weight: 500; color: var(--emerald); padding: 21px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; user-select: none; }
+    .faq-q::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: var(--gold); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { font-size: 0.95rem; color: #4a4540; line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 20px; }
+    .faq-note { font-size: 0.78rem; color: var(--gold); font-style: italic; background: rgba(201,168,76,0.08); border: 1px dashed rgba(201,168,76,0.35); padding: 8px 12px; border-radius: 3px; margin-bottom: 10px; display: block; }
+
+    /* FOOTER */
+    footer { background: var(--near-black); padding: 52px 48px 38px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.06); gap: 20px; flex-wrap: wrap; }
+    .f-logo { font-family: var(--serif); font-size: 1.1rem; color: var(--warm-white); display: block; margin-bottom: 3px; }
+    .f-sub { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+    .f-nav { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+    .f-nav a, .f-social a { font-size: 0.83rem; color: rgba(245,240,232,0.48); text-decoration: none; transition: color 0.15s; }
+    .f-nav a:hover, .f-social a:hover { color: var(--warm-white); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+    .f-copy { font-size: 0.75rem; color: rgba(245,240,232,0.25); }
+    .f-social { display: flex; gap: 18px; }
+    .f-legal { display: flex; gap: 18px; }
+    .f-legal a { font-size: 0.72rem; color: rgba(245,240,232,0.25); text-decoration: none; transition: color 0.15s; }
+    .f-legal a:hover { color: rgba(245,240,232,0.5); }
+
+    /* STICKY MOBILE CTA */
+    .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--gold); padding: 13px 20px; z-index: 200; text-align: center; }
+    .mobile-cta a { color: var(--emerald); font-weight: 600; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.03em; }
+
+    @media (max-width: 900px) {
+      .main-nav { padding: 15px 20px; }
+      .trust-bar { padding: 10px 20px; gap: 12px; }
+      .trust-bar i { display: none; }
+      .hero, section { padding: 68px 20px; }
+      .proof-strip { padding: 44px 20px; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .offer-grid { grid-template-columns: 1fr; }
+      .t-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo { max-width: 300px; height: 360px; }
+      .urgency-bar, .mobile-cta { padding-left: 20px; padding-right: 20px; }
+      .mobile-cta { display: block; }
+      footer { padding: 44px 20px 72px; }
+      .footer-top { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="#" class="nav-logo">Sophia Bailey-Larsen <small>Wisdom on Wealth</small></a>
+    <a href="#apply" class="btn-primary">Apply for a Discovery Call</a>
+  </nav>
+
+  <div class="trust-bar">
+    <span>Global Director, Neuro Change Institute</span>
+    <i></i>
+    <span>Certified Leadership Instructor, Napoleon Hill Foundation</span>
+    <i></i>
+    <span><!-- ACTION REQUIRED: Replace with accurate stat -->30+ Years Mentoring Visionary Women</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow fade-up">Transformational Mentoring</span>
+      <h1 class="fade-up d1">The Women Who Lead<br>Everyone Else Finally Have<br>Someone to Lead Them</h1>
+      <p class="sub fade-up d2">Sophia Bailey-Larsen works with visionary women leaders who have outgrown generic coaching. Using neuroscience, the Napoleon Hill success principles, and 30 years of mentoring experience, she guides you from quiet overwhelm to clear, confident leadership — without burning down everything you have built.</p>
+      <div class="fade-up d3">
+        <a href="#apply" class="btn-primary lg">Apply for Your Discovery Call</a>
+        <span class="micro">Application-based. Limited to women who are ready to do the real work.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="proof-strip">
+    <ul class="proof-grid">
+      <li class="proof-pill">
+        <blockquote>"You have reignited my mindset and goals. I am not the same."</blockquote>
+        <cite>— Dr. Dennis Kimbro · Author, Think and Grow Rich: A Black Choice</cite>
+      </li>
+      <li class="proof-pill">
+        <blockquote>"She helps you see the bigger picture and piece together your vision — with passion and compassion."</blockquote>
+        <cite>— Daniella Blechner · United Kingdom</cite>
+      </li>
+      <li class="proof-pill">
+        <blockquote>"I left feeling more confident and motivated to continue on my path."</blockquote>
+        <cite>— Errol Charles · United Kingdom</cite>
+      </li>
+    </ul>
+  </div>
+
+  <section class="problem">
+    <div class="wrap">
+      <span class="label" style="color:rgba(201,168,76,0.65);">The Real Problem</span>
+      <h2>You have built something real. So why does it still feel like something is missing?</h2>
+      <p class="sub-p">Most women in your position are not failing. They are succeeding at the wrong speed, in the wrong direction, without anyone who truly understands what is at stake for them. Here is what that looks like:</p>
+      <ul class="problem-list">
+        <li>You lead and inspire everyone around you, but there is no one in your corner doing the same for you.</li>
+        <li>You know what to do — and you still find yourself not doing it. Procrastination, not lack of knowledge, is the real problem.</li>
+        <li>You have had wins. But success has not brought the certainty you expected. The self-doubt follows you into rooms it has no business being in.</li>
+        <li>You have worked with coaches before. The frameworks were fine. But nothing shifted at the level where it actually needed to.</li>
+        <li>You sense there is a next level. You just cannot see it clearly from where you are standing right now.</li>
+      </ul>
+      <p class="closer">This is not a willpower problem. It is a pattern problem. And patterns live in the subconscious — which is exactly where this work goes.</p>
+    </div>
+  </section>
+
+  <section class="solution">
+    <div class="wrap">
+      <span class="label">The Work</span>
+      <h2>What changes when you work with Sophia</h2>
+      <p>Sophia Bailey-Larsen is a Transformational Mentor for women in leadership — coaches, executives, entrepreneurs, and professionals who are ready for a level of inner change that matches their outer ambition.</p>
+      <p>She does not teach you to think differently. She works at the level beneath thought — the subconscious patterns, beliefs, and emotional responses that are quietly running your decisions. Using the Neuro Change Method, Wealth Dynamics, and the Science of Success, Sophia creates a mentoring space where real clarity, confidence, and direction emerge.</p>
+      <p>Her clients leave with something more valuable than a strategy: they leave knowing how they are wired to succeed — and trusting it.</p>
+    </div>
+  </section>
+
+  <section class="offer">
+    <div class="wrap-wide">
+      <span class="label">Work With Sophia</span>
+      <h2>Two paths into the mentoring</h2>
+      <div class="offer-grid">
+
+        <article class="offer-card">
+          <span class="offer-eyebrow">6-Week Intensive</span>
+          <h3>The Neuro Change Method</h3>
+          <p class="offer-tagline">For women ready to reset the subconscious patterns behind their results.</p>
+          <ul class="offer-features">
+            <li><strong>Subconscious pattern reset</strong> — release internal blocks that do not shift through insight alone, so aligned action feels natural instead of forced</li>
+            <li><strong>Evidence-based Neuro Change Method</strong> — a proven framework used by the Neuro Change Institute globally</li>
+            <li><strong>Group cohort experience</strong> — structured weekly sessions with other women doing serious inner work</li>
+            <li><strong>Foundation for the Collective</strong> — completing this path opens the door to Sophia's high-level 1:1 mentoring</li>
+          </ul>
+          <p class="placeholder-note"><!-- ACTION REQUIRED: Insert next cohort date + spots available -->[ Next cohort: INSERT DATE · X spots remaining ]</p>
+          <a href="https://live.vcita.com/site/sophiabailey" target="_blank" class="btn-secondary">Learn More &amp; Apply</a>
+        </article>
+
+        <article class="offer-card featured">
+          <span class="offer-eyebrow" style="background:rgba(201,168,76,0.12);display:inline-block;padding:3px 9px;border-radius:2px;color:var(--emerald);">High-Level · 1:1</span>
+          <h3>The NEU Rich Collective</h3>
+          <p class="offer-tagline">For experienced leaders and coaches ready for their next chapter — personally and professionally.</p>
+          <ul class="offer-features">
+            <li><strong>1:1 sessions with Sophia</strong> — every session built around your breakthroughs, challenges, and vision — not a generic template</li>
+            <li><strong>Wealth Dynamics profile</strong> — understand exactly how you are wired to create value, make decisions, and lead with less resistance</li>
+            <li><strong>Napoleon Hill Science of Success</strong> — the inner mechanics of achievement, influence, and sustained confidence</li>
+            <li><strong>Pathway from Mentee to Mentor</strong> — option to certify as a Neuro Change Practitioner and build your own transformational practice</li>
+            <li><strong>Business development support</strong> — for coaches ready to position as transformational leaders in their field</li>
+          </ul>
+          <a href="#apply" class="btn-primary">Apply for the Collective</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="qual">
+    <div class="wrap">
+      <span class="label" style="color:rgba(201,168,76,0.65);">Is This For You?</span>
+      <h2>This mentoring is for you if:</h2>
+      <ul class="qual-list">
+        <li>You are a woman in leadership — coach, executive, entrepreneur, or professional — who has built something real and knows there is more</li>
+        <li>You have tried coaching before and found it useful, but it did not go deep enough to shift what actually needed to shift</li>
+        <li>You are tired of managing everyone else's growth while your own development sits on the back burner</li>
+        <li>You are ready to do real inner work — not just strategy sessions or accountability calls</li>
+        <li>You want clarity that stays. Not a high that fades after the call ends.</li>
+      </ul>
+      <h2 class="nf">This is not for you if:</h2>
+      <ul class="qual-list">
+        <li>You are looking for a quick tactical fix or a plug-and-play framework</li>
+        <li>You are not ready to examine the beliefs and patterns underneath your current results</li>
+        <li>You want someone to hand you a plan — Sophia guides your own breakthrough, she does not do the thinking for you</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="wrap-wide">
+      <span class="label">What Women Say</span>
+      <h2>After working with Sophia</h2>
+      <div class="t-grid">
+
+        <article class="t-card">
+          <div class="t-photo">Photo</div>
+          <h3>Sharleen Linton</h3>
+          <p class="t-loc">United Kingdom</p>
+          <blockquote>"You are one of the most down-to-earth, relatable, personable, kind, warm and joyful mentors I have ever come across. Who you are is what is making room for you to do what you do."</blockquote>
+          <p class="t-note"><!-- ACTION REQUIRED: Add specific result or transformation -->[ Add measurable outcome ]</p>
+        </article>
+
+        <article class="t-card">
+          <div class="t-photo">Photo</div>
+          <h3>Jennifer Williams</h3>
+          <p class="t-loc">United Kingdom</p>
+          <blockquote>"You helped me access ideas and gems that were hidden from my view. You came with wisdom and ideas that got the juices flowing. Now my mind is on overdrive."</blockquote>
+          <p class="t-note"><!-- ACTION REQUIRED: Add specific business or transformation outcome -->[ Add measurable outcome ]</p>
+        </article>
+
+        <article class="t-card">
+          <div class="t-photo">Photo</div>
+          <h3>Daniella Blechner</h3>
+          <p class="t-loc">United Kingdom</p>
+          <blockquote>"If you have a vision or dream, you must hire this lady. She helps you see the bigger picture and piece together your vision — with passion and compassion."</blockquote>
+          <p class="t-note"><!-- ACTION REQUIRED: Add specific result -->[ Add measurable outcome ]</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap-wide">
+      <div class="about-grid">
+        <div class="about-photo">
+          <p>Sophia's Portrait</p>
+          <small><!-- ACTION REQUIRED: Replace with professional headshot -->Replace with professional photo</small>
+        </div>
+        <div>
+          <span class="label">About Sophia</span>
+          <h2>30 years. One consistent result: women who lead their lives on their own terms.</h2>
+          <p>For over three decades, Sophia Bailey-Larsen has been creating space for women in leadership to reconnect with their own inner authority. Based between the UK and Spain, she works with women across the globe — from emerging coaches to senior executives — who are ready for transformation that goes beyond tactics.</p>
+          <p>As Global Director of the Neuro Change Institute, a Certified Leadership Instructor with the Napoleon Hill Foundation, and a Certified Wealth Flow Consultant, Sophia brings a rare combination of evidence-based neuroscience and timeless success philosophy to every session.</p>
+          <p>She is not a hype-based motivator. Her clients describe her as the person who helps them hear their own voice more clearly — and trust it more fully.</p>
+          <ul class="creds">
+            <li>Global Director, Neuro Change Institute</li>
+            <li>Certified Leadership Instructor, Napoleon Hill Foundation</li>
+            <li>Certified Meditation Teacher &amp; Wealth Flow Consultant</li>
+            <li><!-- ACTION REQUIRED: Insert verified client count or years -->30+ years mentoring women in leadership globally</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="risk">
+    <div class="wrap" style="text-align:center;">
+      <span class="label">No Risk. No Obligation.</span>
+      <h2>The discovery call is free.<br>The only requirement is that you are ready.</h2>
+      <p>Your first step is a no-obligation conversation with Sophia. No pitch, no pressure, no commitment required. The call exists to find out whether this is the right path for you at this point in your journey.</p>
+      <p>If you are accepted into the mentoring and show up fully — doing the sessions, doing the inner work — and you do not experience meaningful progress, Sophia will continue working with you until you do, at no additional cost.</p>
+      <p class="action-note"><!-- ACTION REQUIRED: Confirm exact guarantee terms with Sophia before publishing -->[ Confirm guarantee language with Sophia before launch ]</p>
+    </div>
+  </section>
+
+  <div class="urgency-bar">
+    <p>Sophia takes a limited number of new clients each month to ensure every relationship gets the depth it deserves. <em><!-- ACTION REQUIRED: Insert real spots count and intake date -->[ X spots currently available — next intake: INSERT DATE ]</em></p>
+  </div>
+
+  <section class="final-cta" id="apply">
+    <div class="wrap" style="text-align:center;">
+      <span class="label" style="color:rgba(201,168,76,0.6);">Your Next Step</span>
+      <h2>You have led long enough without someone in your corner.</h2>
+      <p>The discovery call takes 45 minutes. It is a conversation — not a sales pitch. You will leave with clarity on whether this work is right for you, regardless of what you decide next.</p>
+      <a href="https://live.vcita.com/site/sophiabailey" target="_blank" rel="noopener" class="btn-primary lg">Apply for Your Discovery Call</a>
+      <span class="micro">Application-based. Free. No commitment required.</span>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <span class="label">Questions</span>
+      <h2>What you need to know before applying</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q">What is the difference between the Neuro Change Method and the NEU Rich Collective?</div>
+          <div class="faq-a">The Neuro Change Method is a structured 6-week group program that works at the subconscious level to reset patterns and create consistent results. It is the foundation. The NEU Rich Collective is Sophia's high-level 1:1 mentoring experience — deeper, longer-term, and tailored entirely to you. Experienced leaders and coaches can apply to the Collective directly without completing the 6-week program first.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How much does it cost?</div>
+          <div class="faq-a"><span class="faq-note"><!-- ACTION REQUIRED: Insert pricing or confirm it is discussed on the discovery call -->[ Investment discussed on the discovery call — insert pricing here or confirm with Sophia ]</span></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How much time does this require each week?</div>
+          <div class="faq-a">The Neuro Change Method runs over 6 weeks with structured group sessions. The NEU Rich Collective is built around your schedule and designed for women in active leadership. Sophia will be specific about time commitment on your discovery call.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">I have worked with coaches before and it did not really stick. How is this different?</div>
+          <div class="faq-a">Most coaching works at the level of strategy and awareness. Sophia's work goes beneath that — to the subconscious patterns and beliefs that were running the show before awareness ever arrived. That is why people who have been through multiple coaching programs describe working with Sophia as the first time something actually shifted.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What happens after I apply?</div>
+          <div class="faq-a">Sophia or her team will review your application and reach out to schedule your discovery call. On the call, you will talk through where you are, what you are working toward, and whether this path is the right fit. No pressure, no obligation — you leave with clarity either way.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Is this only for coaches?</div>
+          <div class="faq-a">No. Sophia works with women in leadership across industries — coaches, executives, entrepreneurs, and professionals. The common thread is not your job title. It is where you are in your journey: you have built real things, you lead real people, and you are ready for the inner work that matches the outer responsibility you carry.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <span class="f-logo">Sophia Bailey-Larsen</span>
+        <span class="f-sub">Wisdom on Wealth</span>
+      </div>
+      <nav class="f-nav">
+        <a href="https://www.sophiabailey.co.uk/about-sophia/">About</a>
+        <a href="https://www.sophiabailey.co.uk/mentoring/">Mentoring</a>
+        <a href="https://www.sophiabailey.co.uk/free-resources/">Wisdom</a>
+        <a href="https://www.sophiabailey.co.uk/blog/">Blog</a>
+        <a href="https://live.vcita.com/site/sophiabailey" target="_blank">Apply Now</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="f-copy">© 2026 Sophia Bailey-Larsen. All rights reserved.</p>
+      <nav class="f-social">
+        <a href="https://www.instagram.com/thesophiabailey/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/sophiabailey/" target="_blank">LinkedIn</a>
+        <a href="https://www.youtube.com/@SophiaBailey" target="_blank">YouTube</a>
+      </nav>
+      <nav class="f-legal">
+        <a href="https://www.sophiabailey.co.uk/privacy-policy/">Privacy</a>
+        <a href="https://www.sophiabailey.co.uk/legal-notice/">Legal</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a href="#apply">Apply for Your Discovery Call →</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
